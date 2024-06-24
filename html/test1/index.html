@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World</title>
+    <script src="https://kit.fontawesome.com/905457b792.js" crossorigin="anonymous"></script>
+    <style>
+        h2.navItem {
+            display: inline;
+            padding: 5px;
+            border: 1px solid #D6955B;
+            cursor: pointer;
+            user-select: none;
+            border-radius: 100px;
+        }
+
+        h2.navItem:hover {
+            background-color: #ffffff;
+        }
+
+        .header {
+            text-align: center;
+            color: #D6955B;
+        }
+
+        .affichage {
+            border: 1px solid black;
+            text-align: center;
+            margin: 50px;
+        }
+
+        footer {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            text-align: center;
+            width: 100%;
+            padding: 3px;
+            display: block;
+        }
+
+        body {
+            background-color: #ECF8F6;
+            color: #18534F;
+        }
+
+        #content {
+            cursor: pointer;
+            user-select: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h1 class="header">Writing Hello World in many programing languages !</h1>
+        <nav class="header">
+            <h2 class="navItem" onclick="charge('C')">C</h2>
+            <h2 class="navItem" onclick="charge('C++')">C++</h2>
+            <h2 class="navItem" onclick="charge('C#')">C#</h2>
+            <h2 class="navItem" onclick="charge('Pascal')">Pascal</h2>
+            <h2 class="navItem" onclick="charge('Java')">Java</h2>
+            <h2 class="navItem" onclick="charge('JavaScript')">JavaScript</h2>
+            <h2 class="navItem" onclick="charge('Python')">Python</h2>
+        </nav>
+    </header>
+    <div class="affichage">
+        <h2 id="content" onclick="changeColor()">The Code to write "Hello World" is displayed here</h2>
+        <img src="hello.png" alt="Hello World">
+    </div>
+    <footer>&copy; Oussama Bouchnak <i class="fa-brands fa-github"></i>OussamaBouchnak
+        <script>
+            var token = 0;
+            function charge(s) {
+                var content = '';
+                switch (s) {
+                    case 'C':
+                        content =
+                            `#include <stdio.h>
+                            int main() {
+                            printf("Hello World");
+                            return 0;
+                            }
+                            `
+                        break
+                    case 'C++':
+                        content =
+                            `#include <iostream>
+ 
+                                int main() {
+                                    std::cout << "Hello World";
+                                    return 0;
+                                }
+                            `
+                        break
+                    case 'C#':
+                        content =
+                            `namespace HelloWorld
+                                {
+                                    class Hello {         
+                                        static void Main(string[] args)
+                                        {
+                                            System.Console.WriteLine("Hello World");
+                                        }
+                                    }
+                                }
+                            `
+                        break
+                    case 'Pascal':
+                        content =
+                            `program Hello;
+                                begin
+                                writeln ('Hello, world.');
+                                end.
+                            `
+                        break
+                    case 'Java':
+                        content =
+                            `import java.io.*;
+                                
+                                class GFG {
+                                    public static void main (String[] args) {
+                                        System.out.println("Hello World");
+                                    }
+                                }
+                            `
+                        break
+                    case 'JavaScript':
+                        content =
+                            `console.log("Hello World");
+                            `
+                        break
+                    case 'Python':
+                        content =
+                            `print("Hello World")
+                            `
+                        break
+                    default: break
+                }
+                document.getElementById("content").innerHTML = content;
+            }
+            function changeColor() {
+                if (token == 0) {
+                    document.getElementById('content').style.color = '#D6955B'
+                    token = 1
+                }
+                else {
+                    document.getElementById('content').style.color = 'black'
+                    token = 0
+                }
+            }   
+        </script>
+    </footer>
+</body>
+
+</html>

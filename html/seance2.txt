@@ -1,0 +1,7 @@
+flexbox: donne la taille  d ecran a lelement
+grid: to divise avec les rows (gridline par row) bootstrap
+ui user interface ux user exoerience
+structure html 5 
+body 
+footer header nav ...…
+pour les images il est de preference webp ou svg
