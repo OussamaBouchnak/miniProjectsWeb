@@ -5,3 +5,10 @@ structure html 5
 body 
 footer header nav ...…
 pour les images il est de preference webp ou svg
+!!!!!!!!! in href it is not recommended to put your path for cybersecurity purposes
+when we use a mail address we add mailto:ous@gmail.com
+_blank	Opens the linked document in a new window or tab
+_self	Opens the linked document in the same frame as it was clicked (this is default)
+_parent	Opens the linked document in the parent frame
+_top	Opens the linked document in the full body of the window
+framename	Opens the linked document in the named iframe
